@@ -7,12 +7,12 @@ import Navbar from '@/components/layout/Navbar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Rohit Medarametla - Software Engineering Student',
+  title: 'Rohit - Software Engineering Student',
   description: 'Portfolio website showcasing projects, skills, and experience in software development',
   keywords: ['software engineer', 'web developer', 'portfolio', 'Next.js', 'React'],
-  authors: [{ name: 'Your Rohit Medarametla' }],
+  authors: [{ name: 'Rohit' }],
   openGraph: {
-    title: 'Your Rohit Medarametla - Software Engineering Student',
+    title: 'Rohit - Software Engineering Student',
     description: 'Portfolio website showcasing projects, skills, and experience',
     type: 'website',
   },
@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-white dark:bg-slate-900 text-gray-900 dark:text-white transition-colors duration-300`}>
+      <body className={`${inter.className} bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50 transition-colors duration-300`}>
         <ThemeProvider>
           <Navbar />
           <main>{children}</main>
