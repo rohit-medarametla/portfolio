@@ -50,29 +50,16 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up delay-300">
-              <a
-                href="/contact"
-                className="px-8 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg font-medium
-                         hover:scale-105 hover:shadow-xl transition-all duration-300"
-              >
+              <a href="/contact" className="px-8 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg font-medium hover:scale-105 hover:shadow-xl transition-all duration-300">
                 Get In Touch
               </a>
-              <a
-                href="/projects"
-                className="px-8 py-3 bg-white dark:bg-slate-800 text-primary-light dark:text-primary-dark 
-                         border-2 border-primary-light dark:border-primary-dark rounded-lg font-medium
-                         hover:scale-105 hover:shadow-xl transition-all duration-300"
-              >
+              <a href="/projects" className="px-8 py-3 bg-white dark:bg-slate-800 text-primary-light dark:text-primary-dark border-2 border-primary-light dark:border-primary-dark rounded-lg font-medium hover:scale-105 hover:shadow-xl transition-all duration-300">
                 View Projects
               </a>
             </div>
 
             {/* Scroll Indicator */}
-            <button
-              onClick={scrollToAbout}
-              className="animate-bounce text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
-              aria-label="Scroll down"
-            >
+            <button onClick={scrollToAbout} className="animate-bounce text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors" aria-label="Scroll down">
               <ArrowDown className="w-8 h-8 mx-auto" />
             </button>
           </div>
@@ -110,13 +97,7 @@ export default function Home() {
                 { label: 'GitHub Repos', value: '20+' },
                 { label: 'Coffee Consumed', value: '∞' },
               ].map((stat, index) => (
-                <div
-                  key={index}
-                  className="p-6 bg-gradient-to-br from-primary-light/10 to-purple-600/10 
-                           dark:from-primary-dark/10 dark:to-purple-600/10 rounded-xl 
-                           border border-gray-200 dark:border-gray-700 hover:scale-105 
-                           transition-transform duration-300"
-                >
+                <div key={index} className="p-6 bg-gradient-to-br from-primary-light/10 to-purple-600/10 dark:from-primary-dark/10 dark:to-purple-600/10 rounded-xl border border-gray-200 dark:border-gray-700 hover:scale-105 transition-transform duration-300">
                   <div className="text-3xl font-bold text-primary-light dark:text-primary-dark mb-2">
                     {stat.value}
                   </div>
@@ -139,49 +120,19 @@ export default function Home() {
             </h3>
             
             <div className="flex space-x-6">
-              <a
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-md 
-                         hover:scale-110 hover:shadow-xl transition-all duration-300
-                         text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark"
-                aria-label="GitHub"
-              >
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark" aria-label="GitHub">
                 <Github className="w-6 h-6" />
               </a>
               
-              <a
-                href="https://linkedin.com/in/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-md 
-                         hover:scale-110 hover:shadow-xl transition-all duration-300
-                         text-gray-700 dark:text-gray-300 hover:text-blue-600"
-                aria-label="LinkedIn"
-              >
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600" aria-label="LinkedIn">
                 <Linkedin className="w-6 h-6" />
               </a>
               
-              <a
-                href="https://twitter.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-md 
-                         hover:scale-110 hover:shadow-xl transition-all duration-300
-                         text-gray-700 dark:text-gray-300 hover:text-sky-500"
-                aria-label="Twitter"
-              >
+              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-sky-500" aria-label="Twitter">
                 <Twitter className="w-6 h-6" />
               </a>
               
-              <a
-                href="mailto:your.email@example.com"
-                className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-md 
-                         hover:scale-110 hover:shadow-xl transition-all duration-300
-                         text-gray-700 dark:text-gray-300 hover:text-red-500"
-                aria-label="Email"
-              >
+              <a href="mailto:your.email@example.com" className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-md hover:scale-110 hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-red-500" aria-label="Email">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
