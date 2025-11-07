@@ -1,6 +1,7 @@
 'use client';
 
 import { Github, Linkedin, Mail, Twitter, ArrowDown } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   const scrollToAbout = () => {
@@ -17,10 +18,16 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
-            {/* Profile Image */}
+            {/* Profile Image with Photo */}
             <div className="mb-8 flex justify-center">
               <div className="relative w-32 h-32 md:w-40 md:h-40">
-                <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-slate-700 shadow-lg bg-gradient-to-br from-slate-300 to-slate-400 dark:from-slate-700 dark:to-slate-600" />
+                <Image
+                  src="/profile.jpg"
+                  alt="Rohit's Profile Photo"
+                  fill
+                  className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 shadow-lg object-cover hover:shadow-xl transition-shadow duration-300"
+                  priority
+                />
               </div>
             </div>
 
@@ -38,16 +45,16 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up delay-300">
-              <a href="/contact" className="px-8 py-3 bg-primary-light dark:bg-accent text-white rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+              <a href="/contact" className="px-8 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
                 Get In Touch
               </a>
-              <a href="/projects" className="px-8 py-3 bg-white dark:bg-slate-800 text-primary-light dark:text-accent border-2 border-primary-light dark:border-accent rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+              <a href="/projects" className="px-8 py-3 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-slate-900 dark:border-white rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
                 View Projects
               </a>
             </div>
 
             {/* Scroll Indicator */}
-            <button onClick={scrollToAbout} className="animate-bounce text-slate-500 dark:text-slate-400 hover:text-primary-light dark:hover:text-accent transition-colors" aria-label="Scroll down">
+            <button onClick={scrollToAbout} className="animate-bounce text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" aria-label="Scroll down">
               <ArrowDown className="w-8 h-8 mx-auto" />
             </button>
           </div>
@@ -69,9 +76,7 @@ export default function Home() {
               <p className="text-lg leading-relaxed">
                 My journey in tech started with a curiosity about how things work, and has evolved into a deep passion for problem-solving through code. I love working on projects that challenge me and help me grow as a developer.
               </p>
-              <p className="text-lg leading-relaxed">
-                When I'm not coding, you can find me exploring Wellington's coffee scene, contributing to open-source projects, or learning about the latest tech trends.
-              </p>
+              
             </div>
 
             <div className="grid grid-cols-2 gap-6">
@@ -81,7 +86,7 @@ export default function Home() {
                 { label: 'GitHub Repos', value: '20+' },
               ].map((stat, index) => (
                 <div key={index} className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="text-3xl font-bold text-primary-light dark:text-accent mb-2">
+                  <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
                     {stat.value}
                   </div>
                   <div className="text-sm text-slate-600 dark:text-slate-400">
@@ -110,7 +115,6 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/rohit-medarametla-140988195/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300" aria-label="LinkedIn">
                 <Linkedin className="w-6 h-6" />
               </a>
-              
               
               
               <a href="mailto:rohit.medarametla@gmail.com" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300" aria-label="Email">
