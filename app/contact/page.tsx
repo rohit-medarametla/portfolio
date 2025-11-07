@@ -119,8 +119,8 @@ export default function ContactPage() {
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-1">
                     Email
                   </h3>
-                  <a href="mailto:your.email@example.com" className="text-slate-600 dark:text-slate-400 hover:text-primary-light dark:hover:text-accent transition-colors">
-                    your.email@example.com
+                  <a href="mailto:rohit.medarametla@gmail.com" className="text-slate-600 dark:text-slate-400 hover:text-primary-light dark:hover:text-accent transition-colors">
+                    rohit.medarametla@gmail.com
                   </a>
                 </div>
               </div>

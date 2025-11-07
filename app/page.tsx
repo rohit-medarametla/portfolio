@@ -79,7 +79,6 @@ export default function Home() {
                 { label: 'Projects', value: '15+' },
                 { label: 'Technologies', value: '10+' },
                 { label: 'GitHub Repos', value: '20+' },
-                { label: 'Coffee ☕', value: '∞' },
               ].map((stat, index) => (
                 <div key={index} className="p-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
                   <div className="text-3xl font-bold text-primary-light dark:text-accent mb-2">
@@ -104,19 +103,17 @@ export default function Home() {
             </h3>
             
             <div className="flex space-x-6">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300" aria-label="GitHub">
+              <a href="https://github.com/rohit-medarametla" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300" aria-label="GitHub">
                 <Github className="w-6 h-6" />
               </a>
               
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/rohit-medarametla-140988195/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300" aria-label="LinkedIn">
                 <Linkedin className="w-6 h-6" />
               </a>
               
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300" aria-label="Twitter">
-                <Twitter className="w-6 h-6" />
-              </a>
               
-              <a href="mailto:your.email@example.com" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300" aria-label="Email">
+              
+              <a href="mailto:rohit.medarametla@gmail.com" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-700 dark:text-slate-300" aria-label="Email">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
