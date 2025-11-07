@@ -1,6 +1,6 @@
 'use client';
 
-import { Code2, Database, Globe, Tool, Smartphone, Brain } from 'lucide-react';
+import { Code2, Database, Globe, Wrench, Smartphone, Brain } from 'lucide-react';
 
 const skillCategories = [
   {
@@ -37,7 +37,7 @@ const skillCategories = [
   },
   {
     title: 'Tools & Technologies',
-    icon: Tool,
+    icon: Wrench,
     skills: [
       { name: 'Git & GitHub', level: 85 },
       { name: 'VS Code', level: 90 },
