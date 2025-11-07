@@ -7,12 +7,12 @@ import Navbar from '@/components/layout/Navbar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Your Name - Software Engineering Student',
+  title: 'Rohit Medarametla - Software Engineering Student',
   description: 'Portfolio website showcasing projects, skills, and experience in software development',
   keywords: ['software engineer', 'web developer', 'portfolio', 'Next.js', 'React'],
-  authors: [{ name: 'Your Name' }],
+  authors: [{ name: 'Your Rohit Medarametla' }],
   openGraph: {
-    title: 'Your Name - Software Engineering Student',
+    title: 'Your Rohit Medarametla - Software Engineering Student',
     description: 'Portfolio website showcasing projects, skills, and experience',
     type: 'website',
   },
