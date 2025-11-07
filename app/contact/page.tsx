@@ -68,7 +68,6 @@ export default function ContactPage() {
         setSubmitSuccess(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
         
-        // Hide success message after 5 seconds
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
         setSubmitError(result.error || 'Something went wrong. Please try again.');
@@ -85,145 +84,107 @@ export default function ContactPage() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
     }
     
-    // Clear submit error
     if (submitError) {
       setSubmitError('');
     }
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen pt-24 pb-16 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary-light to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white">
             Get In Touch
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Have a question or want to work together? I'd love to hear from you!
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">
-          {/* Contact Info - Same as before */}
-          <div className="lg:col-span-1 space-y-8">
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow animate-slide-up">
+          {/* Contact Info */}
+          <div className="lg:col-span-1 space-y-6">
+            {/* Email */}
+            <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow animate-slide-up">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary-light to-purple-600 rounded-lg">
-                  <Mail className="w-6 h-6 text-white" />
+                <div className="p-3 bg-primary-light/10 dark:bg-accent/10 rounded-lg">
+                  <Mail className="w-6 h-6 text-primary-light dark:text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-1">
                     Email
                   </h3>
-                  <a
-                    href="mailto:your.email@example.com"
-                    className="text-gray-600 dark:text-gray-400 hover:text-primary-light dark:hover:text-primary-dark transition-colors"
-                  >
+                  <a href="mailto:your.email@example.com" className="text-slate-600 dark:text-slate-400 hover:text-primary-light dark:hover:text-accent transition-colors">
                     your.email@example.com
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow animate-slide-up delay-100">
+            {/* Location */}
+            <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow animate-slide-up delay-100">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary-light to-purple-600 rounded-lg">
-                  <MapPin className="w-6 h-6 text-white" />
+                <div className="p-3 bg-primary-light/10 dark:bg-accent/10 rounded-lg">
+                  <MapPin className="w-6 h-6 text-primary-light dark:text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-1">
                     Location
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className="text-slate-600 dark:text-slate-400">
                     Wellington, New Zealand 🇳🇿
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow animate-slide-up delay-200">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary-light to-purple-600 rounded-lg">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                    Phone
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Available on request
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-primary-light/10 to-purple-600/10 dark:from-primary-dark/10 dark:to-purple-600/10 rounded-xl p-6 border border-gray-200 dark:border-gray-700 animate-slide-up delay-300">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+            {/* Social Links */}
+            <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 shadow-sm animate-slide-up delay-200">
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
                 Connect on Social Media
               </h3>
               <div className="flex space-x-4">
-                <a
-                  href="https://github.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-white dark:bg-slate-800 rounded-lg hover:scale-110 transition-transform"
-                  aria-label="GitHub"
-                >
-                  <Github className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 bg-white dark:bg-slate-900 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400" aria-label="GitHub">
+                  <Github className="w-6 h-6" />
                 </a>
-                <a
-                  href="https://linkedin.com/in/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-white dark:bg-slate-800 rounded-lg hover:scale-110 transition-transform"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-6 h-6 text-blue-600" />
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 bg-white dark:bg-slate-900 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400" aria-label="LinkedIn">
+                  <Linkedin className="w-6 h-6" />
                 </a>
-                <a
-                  href="https://twitter.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-white dark:bg-slate-800 rounded-lg hover:scale-110 transition-transform"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-6 h-6 text-sky-500" />
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="p-3 bg-white dark:bg-slate-900 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400" aria-label="Twitter">
+                  <Twitter className="w-6 h-6" />
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Contact Form with Supabase Integration */}
+          {/* Contact Form */}
           <div className="lg:col-span-2">
-            <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg animate-slide-up">
+            <form onSubmit={handleSubmit} className="bg-slate-50 dark:bg-slate-800 rounded-lg p-8 shadow-sm border border-slate-200 dark:border-slate-700 animate-slide-up">
               {/* Success Message */}
               {submitSuccess && (
-                <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-500 rounded-lg animate-fade-in">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
-                    <p className="text-green-700 dark:text-green-400 font-medium">
-                      Message sent successfully! Your message has been saved and I'll get back to you soon.
-                    </p>
-                  </div>
+                <div className="mb-6 p-4 bg-success/10 border border-success rounded-lg animate-fade-in flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
+                  <p className="text-success font-medium">
+                    Message sent successfully! I'll get back to you soon.
+                  </p>
                 </div>
               )}
 
               {/* Error Message */}
               {submitError && (
-                <div className="mb-6 p-4 bg-red-100 dark:bg-red-900/30 border border-red-500 rounded-lg text-red-700 dark:text-red-400 animate-fade-in">
+                <div className="mb-6 p-4 bg-red-100 dark:bg-red-900/30 border border-red-500 rounded-lg text-red-600 dark:text-red-400 animate-fade-in">
                   {submitError}
                 </div>
               )}
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                     Your Name *
                   </label>
                   <input
@@ -235,10 +196,8 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 rounded-lg border ${
                       errors.name
                         ? 'border-red-500'
-                        : 'border-gray-300 dark:border-gray-600'
-                    } bg-white dark:bg-slate-700 text-gray-900 dark:text-white 
-                     focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark 
-                     focus:border-transparent transition-all`}
+                        : 'border-slate-300 dark:border-slate-600'
+                    } bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-light dark:focus:ring-accent focus:border-transparent transition-all`}
                     placeholder="John Doe"
                   />
                   {errors.name && (
@@ -247,7 +206,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                     Your Email *
                   </label>
                   <input
@@ -259,10 +218,8 @@ export default function ContactPage() {
                     className={`w-full px-4 py-3 rounded-lg border ${
                       errors.email
                         ? 'border-red-500'
-                        : 'border-gray-300 dark:border-gray-600'
-                    } bg-white dark:bg-slate-700 text-gray-900 dark:text-white 
-                     focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark 
-                     focus:border-transparent transition-all`}
+                        : 'border-slate-300 dark:border-slate-600'
+                    } bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-light dark:focus:ring-accent focus:border-transparent transition-all`}
                     placeholder="john@example.com"
                   />
                   {errors.email && (
@@ -272,7 +229,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mb-6">
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                   Subject *
                 </label>
                 <input
@@ -284,10 +241,8 @@ export default function ContactPage() {
                   className={`w-full px-4 py-3 rounded-lg border ${
                     errors.subject
                       ? 'border-red-500'
-                      : 'border-gray-300 dark:border-gray-600'
-                  } bg-white dark:bg-slate-700 text-gray-900 dark:text-white 
-                   focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark 
-                   focus:border-transparent transition-all`}
+                      : 'border-slate-300 dark:border-slate-600'
+                  } bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-light dark:focus:ring-accent focus:border-transparent transition-all`}
                   placeholder="Project Collaboration"
                 />
                 {errors.subject && (
@@ -296,7 +251,7 @@ export default function ContactPage() {
               </div>
 
               <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -308,10 +263,8 @@ export default function ContactPage() {
                   className={`w-full px-4 py-3 rounded-lg border ${
                     errors.message
                       ? 'border-red-500'
-                      : 'border-gray-300 dark:border-gray-600'
-                  } bg-white dark:bg-slate-700 text-gray-900 dark:text-white 
-                   focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark 
-                   focus:border-transparent transition-all resize-none`}
+                      : 'border-slate-300 dark:border-slate-600'
+                  } bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary-light dark:focus:ring-accent focus:border-transparent transition-all resize-none`}
                   placeholder="Tell me about your project..."
                 />
                 {errors.message && (
@@ -322,11 +275,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-gradient-to-r from-primary-light to-purple-600 
-                         text-white font-semibold rounded-lg shadow-lg hover:shadow-xl 
-                         hover:scale-105 transition-all duration-300 flex items-center 
-                         justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed 
-                         disabled:hover:scale-100"
+                className="w-full px-8 py-4 bg-primary-light dark:bg-accent text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 {isSubmitting ? (
                   <>
@@ -341,7 +290,7 @@ export default function ContactPage() {
                 )}
               </button>
 
-              <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 text-center">
+              <p className="mt-4 text-sm text-slate-600 dark:text-slate-400 text-center">
                 Your message will be securely stored and I'll respond within 24-48 hours.
               </p>
             </form>
